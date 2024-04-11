@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.helloapplication.FXController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="selectLanguage" text="Select Language"/>
+    <ComboBox fx:id="languageComboBox" onAction="#changeLanguage">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="English"/>
+                <String fx:value="Persian"/>
+                <String fx:value="Japanese"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Label fx:id="firstName" text="First Name"/>
+    <TextField fx:id="firstNameTextField"/>
+    <Label fx:id="lastName" text="Last Name"/>
+    <TextField fx:id="lastNameTextField"/>
+    <Label fx:id="email" text="Email"/>
+    <TextField fx:id="emailTextField"/>
+    <Button fx:id="submitButton" text="Submit" onAction="#submit"/>
+</VBox>
